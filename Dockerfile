@@ -77,8 +77,7 @@ RUN pip3 install --upgrade pip setuptools
 RUN git clone https://github.com/fireispower/Gojo_Satoru /root/Gojo_Satoru
 WORKDIR /root/Gojo_Satoru
 
-#Copy config file to /root/FallenRobot/FallenRobot
-COPY ./Gojo_Satoru/config.py ./Gojo_Satoru/config.py* /root/Gojo_Satoru/Gojo_Satoru/
+
 
 ENV PATH="/home/bot/bin:$PATH"
 
@@ -86,4 +85,4 @@ ENV PATH="/home/bot/bin:$PATH"
 RUN pip3 install -U -r requirements.txt
 
 # Starting Worker
-CMD ["python3","-m","Gojo_Satoru"]
+CMD ["python3","-m","Powers"]
