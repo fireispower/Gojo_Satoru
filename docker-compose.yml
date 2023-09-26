@@ -1,7 +1,7 @@
 version: "3.9"
 services:
-  worker:
-    build: Dockerfile
+  worker: ./Dockerfile
+    build: .
     environment:
       BOT_TOKEN: $BOT_TOKEN # defaults to None
       API_ID: $API_ID # defaults to None
