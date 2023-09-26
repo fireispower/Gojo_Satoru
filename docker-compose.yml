@@ -1,7 +1,13 @@
-version: "3.9"
-services:
-  worker: Dockerfile
-    build: .
+# version: "3.9"
+# services:
+#   worker: Dockerfile
+#     build: .
+
+build:
+  docker:
+    worker: Dockerfile
+run:
+  worker: python3 -m Powers
     environment:
       BOT_TOKEN: $BOT_TOKEN # defaults to None
       API_ID: $API_ID # defaults to None
